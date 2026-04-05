@@ -1,0 +1,12 @@
+{
+  "include": ["backend/app"],
+  "venvPath": ".",
+  "venv": "backend/.venv",
+  "pythonVersion": "3.11",
+  "extraPaths": ["backend"],
+  "typeCheckingMode": "basic",
+  "reportMissingImports": "none",
+  "reportMissingModuleSource": "none",
+  "useLibraryCodeForTypes": true,
+  "autoImportCompletions": true
+}

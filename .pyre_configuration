@@ -1,0 +1,6 @@
+{
+  "source_directories": [{"root": "backend"}],
+  "search_path": ["backend"],
+  "site_package_search_strategy": "all",
+  "ignore_all_errors": true
+}

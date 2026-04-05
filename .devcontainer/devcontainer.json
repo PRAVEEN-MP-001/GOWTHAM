@@ -1,0 +1,32 @@
+{
+  "name": "AI Resume Matcher",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "20" },
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "forwardPorts": [8000, 5173, 5432],
+  "portsAttributes": {
+    "8000": { "label": "FastAPI Backend", "onAutoForward": "notify" },
+    "5173": { "label": "React Frontend", "onAutoForward": "openBrowser" }
+  },
+  "postCreateCommand": "docker compose up --build -d",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "dbaeumer.vscode-eslint",
+        "bradlc.vscode-tailwindcss",
+        "mtxr.sqltools",
+        "ms-azuretools.vscode-docker"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.analysis.extraPaths": ["/home/mp/RESUMEMATCHER/backend"],
+        "css.validate": false,
+        "less.validate": false,
+        "scss.validate": false
+      }
+    }
+  }
+}
